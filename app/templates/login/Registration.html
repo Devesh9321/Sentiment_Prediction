@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>User Registration</title>
+
+    {% import 'asserts.html' as asserts %}
+    {{ asserts.stylesheet() }}
+
+</head>
+
+<body>
+
+    {% include 'headerbar.html' %}
+
+    <main>
+
+        <section
+            class="dark-mode bg-dark bg-size-cover bg-repeat-0 bg-position-center position-relative overflow-hidden py-5 mb-4"
+            style="background-image: url(/static/images/background.png);">
+            <div class="container position-relative zindex-2 pt-5 pb-md-2 pb-lg-4 pb-xl-5">
+                <div class="row pt-2 pb-2 py-md-3">
+                    <div class="d-flex col-md-4 col-lg-6">
+                        <div class="mt-lg-3 m-5 m-md-2 p-lg-3 text-center text-md-start mb-4 mb-md-0 text-light ">
+                            <h1 class="display-3 pb-2 pb-sm-3">Register With use</h1>
+                            <p class="fs-lg d-md-none d-xl-block pb-2 pb-md-0 mb-4 mb-md-5">Welcome to our inventory
+                                website! We are thrilled that you have decided to join our community. Registering with
+                                us is quick and easy, providing you with access to a wide range of features and
+                                resources. Simply click on the "Sign Up" button and fill out the required fields with
+                                your information. We kindly request that you provide accurate details to ensure a smooth
+                                registration process. Once you have completed the form, click "Submit" and voila! You
+                                will officially become a member of our inventory website. Prepare to explore an
+                                organized and efficient platform that will help you manage your inventory effortlessly.
+                                Thank you for choosing us, and we look forward to supporting your inventory needs!
+                            </p>
+                            <div class="d-flex justify-content-center justify-content-md-start pb-2 pt-lg-2 pt-xl-0">
+                                <a href="#" class="btn btn-lg btn-outline-secondary">Contact us</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8 col-lg-6 card border-light shadow-lg">
+                        <div id="register" class="container mt-lg-3 p-1 m-md-2 p-lg-3">
+                            <form class="needs-validation">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="firstName" class="form-label">First name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Valid first name is required.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label for="lastName" class="form-label">Last name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Valid last name is required.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="username" class="form-label">Username</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text"><i class='bx bx-user'></i></span>
+                                            <input type="text" class="form-control" id="username" placeholder="Username"
+                                                required>
+                                            <div class="invalid-feedback">
+                                                Your username is required.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="password" class="form-label">Password</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text"><i class='bx bx-lock-alt'></i></span>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Password" required>
+                                            <div class="invalid-feedback">
+                                                Your username is required.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="you@gmail.com"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for contact.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address"
+                                            placeholder="Please enter your address." required>
+                                        <div class="invalid-feedback">
+                                            Please enter your address.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <dir class="col-6">
+                                        <div class="form-check mt-4">
+                                            <input type="checkbox" class="form-check-input" id="same-address">
+                                            <label class="form-check-label" for="same-address">Accept <a href="#"> Terms
+                                                    and
+                                                    Conditions</a></label>
+                                        </div>
+                                    </dir>
+                                    <dir class="col-6">
+                                        <div class="form-check mt-4">
+                                            <label class="form-check-label" for="same-address"><a href="#"> Already have an Account </a></label>
+                                        </div>
+                                    </dir>
+                                </div>
+
+                                <hr class="my-4">
+
+                                <div class="row">
+                                    <div class="col-6 col-md-6 col-lg-6">
+                                        <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-6">
+                                        <button class="w-100 btn btn-primary btn-lg" type="button"
+                                            onclick="sendregcode()">Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="row mt-3">
+                                <div class="col-6 col-lg-6">
+                                    <p class="password-policy">Password requirements:</p>
+                                    <ul class="password-policy">
+                                        <li>Minimum 8 characters</li>
+                                        <li>Include at least one uppercase and one lowercase letter</li>
+                                        <li>Include at least one number</li>
+                                        <li>Include at least one special character</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-lg-6">
+
+                                    <p class="username-policy">Username requirements:</p>
+                                    <ul class="username-policy">
+                                        <li>Minimum 6 characters</li>
+                                        <li>Maximum 20 characters</li>
+                                        <li>Only alphanumeric characters allowed</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="RegCode" class="container d-none m-auto w-75 ">
+                            <form class="needs-validation">
+                                <div class="row">
+                                    <div class="col-12 my-5">
+                                        <label class="form-label">Enter the Otp That Just Send to your Email </label>
+                                        <div class="input-group has-validation d-flex-block p-3">
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod1"
+                                                required>
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod2"
+                                                required>
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod3"
+                                                required>
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod4"
+                                                required>
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod5"
+                                                required>
+                                            <input type="text" class="form-control border-2 mx-1" id="valicod6"
+                                                required>
+                                            <div class="invalid-feedback">
+                                                Your username is required.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-center text-primary">The Code will Expire in 01:20 </span>
+                                    <hr class="my-4">
+
+                                    <div class="row">
+                                        <div class="col-6 col-md-6 col-lg-6">
+                                            <button class="w-100 btn btn-primary btn-lg" type="submit">Varify</button>
+                                        </div>
+                                        <div class="col-6 col-md-6 col-lg-6">
+                                            <button class="w-100 btn btn-primary btn-lg">Resend Again </button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        {% include 'footer.html' %}
+    </main>
+
+    {{ asserts.scriptsheet() }}
+
+    <script>
+
+        function sendregcode() {
+            var x = document.getElementById('register');
+            var y = document.getElementById('RegCode');
+            x.classList.add('d-none');
+            y.classList.remove('d-none');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

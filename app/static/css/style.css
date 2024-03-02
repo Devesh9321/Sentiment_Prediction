@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,100&display=swap');
+
+:root {
+  --primary-bg-color: #d4d0c9;
+  --primary-text-color: #333;
+  /* --form-input-bg: #f5f5f5; */
+  --form-input-bg: #6e6e80;
+  --form-input-text: #1a1919;
+  --dark-bg-color: #e0c0ff;
+  --dark-text-color: #f9f9f9;
+  --dark-form-input-bg: #555;
+  --dark-form-input-text: #ffffff;
+  --header-col: #202123;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  color: #5a5a5a;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  /* 
+  background-image: url(../images/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  */
+}
+
+/* Header */
+header {
+  position: relative;
+  background-color: var(--header-col);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Form Styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  color: var(--form-input-text);
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+  color: var(--form-input-text);
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group .col-sm-2 {
+  padding: 0;
+}
+
+.form-group .col-sm-10 {
+  padding-left: 1rem;
+}
+
+.form-group .form-control {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.form-group .input-group-text {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--form-input-bg);
+}
+
+.form-control {
+  background-color: var(--form-input-bg);
+  color: var(--form-input-text);
+  border: none;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: var(--form-input-bg);
+  color: var(--form-input-text);
+  border: none;
+}
+
+/* Emoji Animation */
+@keyframes rotateEmoji {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.emoji {
+  text-align: center;
+  margin: auto;
+  font-size: 100px;
+  display: inline-block;
+  /* animation: rotateEmoji 2s linear infinite; */
+}
+
+/* Dark Mode */
+.dark-mode-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*
+  --text-primary: #202123;
+  --text-default: #353740;
+  --text-secondary: #6e6e80;
+  --text-disabled: #acacbe;
+*/
+
+
+.dark-mode {
+  --primary-bg-color: #353740;
+  --primary-text-color: #f9f9f9;
+  color: var(--dark-form-input-text);
+  /* --form-input-text: #f5f5f5; */
+}
+
+.dark-mode-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Dark Mode button icon */
+.dark-mode-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the toggle switch */
+.toggle-switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style the switch thumb (indicator) */
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  /* background-color: #fff; */
+  background-color: #030303;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s;
+}
+
+/* Change the switch thumb position based on the checked state */
+.dark-mode-toggle input[type="checkbox"]:checked+.toggle-switch::before {
+  transform: translateX(26px);
+}
+
+/* Dark Mode toggle icon */
+.dark-mode-icon {
+  font-size: 24px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Adjust the icon position */
+.toggle-switch .dark-mode-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+}
+
+.toggle-switch .light-mode-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+/* login */
+#login {
+  width: 500px;
+  height: 550px;
+  padding: 10px;
+  margin: 40px auto;
+  /* background-color: rgb(233, 165, 165); */
+}
